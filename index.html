@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meteora</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <main class="app-wrapper">
+
+    <header class="app-header">
+      <span class="logo-text">Meteora</span>
+    </header>
+
+    <section class="search-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Pesquisar cidade..."
+          autocomplete="off"
+        />
+        <button id="search-btn" class="search-btn" aria-label="Buscar clima">→</button>
+      </div>
+      <p class="error-msg" id="error-msg"></p>
+    </section>
+
+    <div class="content-area">
+
+      <div class="welcome-state" id="welcome-state">
+        <div class="welcome-cat">🐱</div>
+        <p class="welcome-text">Digite uma cidade para ver o clima!</p>
+        <p class="welcome-sub">Eu fico de olho no tempo pra você ☁️</p>
+      </div>
+
+      <div class="weather-content hidden" id="weather-content">
+
+        <section class="card hero-card">
+          <div class="hero-top">
+            <div class="hero-city-info">
+              <h1 class="city-name" id="city-name">—</h1>
+              <p class="country-name" id="country-name">—</p>
+              <p class="weather-desc" id="weather-desc">—</p>
+            </div>
+            <img class="cat-img" id="cat-img" src="" alt="clima atual" />
+          </div>
+          <div class="hero-bottom">
+            <span class="temp-main" id="temp-main">—°</span>
+            <div class="temp-details">
+              <span class="temp-feels-label">Sensação</span>
+              <span class="temp-feels" id="temp-feels">—°</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card stats-card">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-icon">💧</span>
+              <span class="stat-label">Umidade</span>
+              <span class="stat-value" id="stat-humidity">—</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">🌧️</span>
+              <span class="stat-label">Chuva</span>
+              <span class="stat-value" id="stat-rain">—</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card hourly-card">
+          <h2 class="card-title">Próximas horas</h2>
+          <div class="hourly-scroll" id="hourly-scroll"></div>
+        </section>
+
+        <section class="card weekly-card">
+          <h2 class="card-title">Próximos 7 dias</h2>
+          <div class="weekly-list" id="weekly-list"></div>
+        </section>
+
+      </div>
+    </div>
+
+    <div class="loading-overlay hidden" id="loading-overlay">
+      <div class="loading-spinner"></div>
+      <p class="loading-text">Consultando o tempo... 🐾</p>
+    </div>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
