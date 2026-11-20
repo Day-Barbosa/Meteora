@@ -159,7 +159,7 @@ function updateHeroCard(city, country, current) {
   document.getElementById('weather-desc').textContent = WMO_DESCRIPTIONS[wmoCode] ?? 'Condição desconhecida';
 
   // Imagem do gatinho PNG correspondente ao clima
-  catImg.src = `${condition}.png`;
+  catImg.src = `assets/img/${condition}.png`;
   catImg.classList.remove('hidden');
 
   // Degradê de fundo correspondente
